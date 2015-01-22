@@ -1,7 +1,7 @@
 <?php
 	// GitHib Repo Lister - API demo code
 	// Author: Simon Prickett
-
+	
 	// Hit the GitHub API and list the repos, will expect
 	// to be passed a GitHub token in GITHUB_TOKEN environment variable
 	function listGitHubRepos() {
@@ -16,7 +16,7 @@
 			"User-Agent: Modus PHP Script",                                                                         
     		"Content-Type: application/json",  
     		"Accept-Language: en-US",  
-    		"Authorization: token " . $_ENV["GITHUB_TOKEN"])                                                                            
+    		"Authorization: token " . getenv("GITHUB_TOKEN"))                                                                            
 		);    
 
 		$output = curl_exec($c);
